@@ -1,6 +1,10 @@
 package com.kumsal.testDb;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,8 +22,24 @@ public class TestDb extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String user="hbstudent",password="hbstudent";
+		
+		String jdbcUrl="jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=GMT";
+		String driver="com.mysql.jdbc.Driver";
+		try {
+			PrintWriter out=response.getWriter();
+			
+			out.println("Connecting to databse: "+jdbcUrl);
+			
+			Class.forName(driver);
+			
+			Connection myConnection=DriverManager.getConnection(jdbcUrl, user, password);
+			
+			out.print("Succes");
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new ServletException(e);
+		}	
 	}
 
 }
