@@ -1,4 +1,4 @@
-package com.kumsal.spring.entity;
+package com.kumsal.spring.dao;
 
 public class CustomerDAOImpl {
 
