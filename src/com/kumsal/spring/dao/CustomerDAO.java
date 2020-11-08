@@ -1,5 +1,10 @@
 package com.kumsal.spring.dao;
 
-public interface CustomerDAO {
+import java.util.List;
 
+import com.kumsal.spring.entity.Customer;
+
+public interface CustomerDAO {
+	
+	public List<Customer> getCustomer();
 }
