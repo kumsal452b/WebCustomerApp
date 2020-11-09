@@ -15,12 +15,12 @@ import com.kumsal.spring.entity.Customer;
 public class CustomerController {
 	
 	@Autowired
-	private CustomerDAO customerDAO;
+	private CustomerDAO denek;
 	
 	@RequestMapping("/list")
 	public String listCustomers(Model theModel){
 		
-		List<Customer> theCostumer=customerDAO.getCustomer();
+		List<Customer> theCostumer=denek.getCustomer();
 		
 		theModel.addAttribute("customer",theCostumer);
 		return "list-customers";
