@@ -27,9 +27,13 @@
 							Email
 						</th>
 					</tr>
-					<?php foreach($rows as $value): ?>
-   		
-					<?php endforeach; ?>
+					<c:forEach varStatus="tempCustomer" items="${customers}" >
+								<tr>
+									<td>${tempCustomer.firstName}</td>
+									<td>${tempCustomer.lastName}</td>
+									<td>${tempCustomer.email}</td>
+								</tr>
+					</c:forEach>
 				</table>
 			</div>
 		</div>
