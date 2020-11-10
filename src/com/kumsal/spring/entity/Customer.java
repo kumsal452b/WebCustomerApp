@@ -33,7 +33,9 @@ public class Customer {
 		this.lastName = lastName;
 		this.email = email;
 	}
-
+	public Customer() {
+		
+	}
 	public int getId() {
 		return id;
 	}

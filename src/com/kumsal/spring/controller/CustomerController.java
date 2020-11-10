@@ -14,15 +14,15 @@ import com.kumsal.spring.entity.Customer;
 @RequestMapping("/customer")
 public class CustomerController {
 	
-//	@Autowired
-//	private CustomerDAO denek;
+	@Autowired
+	private CustomerDAO denek;
 	
 	@RequestMapping("/list")
 	public String listCustomers(Model theModel){
 		
-//		List<Customer> theCostumer=denek.getCustomer();
-//		
-//		theModel.addAttribute("customer",theCostumer);
+		List<Customer> theCostumer=denek.getCustomer();
+		
+		theModel.addAttribute("customer",theCostumer);
 		return "list-customers";
 	}
 }
