@@ -11,12 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.kumsal.spring.dao.CustomerDAO;
 import com.kumsal.spring.entity.Customer;
+import com.kumsal.spring.service.CustomerService;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
 	
 	
+	@Autowired
+	private CustomerService customerService;
 	
 	@GetMapping("/list")
 	public String listCustomers(Model theModel){
