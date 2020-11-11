@@ -24,7 +24,7 @@ public class CustomerController {
 	@GetMapping("/list")
 	public String listCustomers(Model theModel){
 		
-		List<Customer> theCostumer=denek.getCustomer();
+		List<Customer> theCostumer=customerService.getCustomer();
 		
 		theModel.addAttribute("customer",theCostumer);
 		
