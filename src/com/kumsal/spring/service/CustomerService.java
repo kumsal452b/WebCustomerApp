@@ -7,4 +7,7 @@ import com.kumsal.spring.entity.Customer;
 public interface CustomerService {
 
 	public List<Customer> getCustomer();
+
+	public void saveCustomer(Customer theCustomer);
+	
 }
