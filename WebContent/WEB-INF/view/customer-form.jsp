@@ -43,9 +43,12 @@
 					</tr>
 				</tbody>
 			</table>
-			
-		
 		</form:form>
+		<dir style="clear;both;">
+			<p>
+				<a href="${pageContext.request.contextPath}/customer/list">Back to List</a>
+			</p>
+		</dir>
 	</div>
 </body>
 </html>
