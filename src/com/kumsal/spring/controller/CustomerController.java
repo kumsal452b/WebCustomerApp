@@ -51,7 +51,9 @@ public class CustomerController {
 	
 	@GetMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("customerId") int id,Model model){
+		System.out.println("Burasi calisti");
 		Customer theCustomer=customerService.getCustomer(id);
+		System.out.println("tanimlama "+theCustomer);
 		model.addAttribute("costumer",theCustomer);
 		return "customer-form";
 	}
