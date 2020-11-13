@@ -49,6 +49,7 @@ public class CustomerController {
 		return "redirect:/customer/list";
 	}
 	
+	@GetMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("customerId") int id,Model model){
 		Customer theCustomer=customerService.getCustomer(id);
 		model.addAttribute("costumer",theCustomer);

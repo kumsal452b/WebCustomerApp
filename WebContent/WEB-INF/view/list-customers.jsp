@@ -48,7 +48,7 @@
 									<td>${tempCustomer.lastName}</td>
 									<td>${tempCustomer.email}</td>
 									<td>
-										<a href="${updateLink}"> </a>
+										<a href="${updateLink}">Update </a>
 									</td>
 								</tr>
 					</c:forEach>
