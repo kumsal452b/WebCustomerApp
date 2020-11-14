@@ -1,4 +1,4 @@
-package com.kumsal.spring.entity;
+package com.luv2code.springdemo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,12 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-
 @Entity
 @Table(name="customer")
 public class Customer {
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
@@ -20,22 +18,17 @@ public class Customer {
 	
 	@Column(name="first_name")
 	private String firstName;
-
+	
 	@Column(name="last_name")
 	private String lastName;
 	
 	@Column(name="email")
 	private String email;
-
-	public Customer(String firstName, String lastName, String email) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-	}
+	
 	public Customer() {
 		
 	}
+
 	public int getId() {
 		return id;
 	}
@@ -72,6 +65,10 @@ public class Customer {
 	public String toString() {
 		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
-	
-	
+		
 }
+
+
+
+
+
