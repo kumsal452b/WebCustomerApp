@@ -53,7 +53,7 @@ public class CustomerController {
 	public String showFormForUpdate(@RequestParam("customerId") int id,Model model){
 		System.out.println("Burasi calisti");
 		Customer theCustomer=customerService.getCustomer(id);
-		System.out.println("tanimlama "+theCustomer);
+		System.out.println("tanimlama "+theCustomer.getEmail() +theCustomer.getEmail());
 		model.addAttribute("costumer",theCustomer);
 		return "customer-form";
 	}
