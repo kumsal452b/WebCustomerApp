@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.controller;
+package com.kumsal.spring.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.luv2code.springdemo.entity.Customer;
-import com.luv2code.springdemo.service.CustomerService;
+import com.kumsal.spring.entity.Customer;
+import com.kumsal.spring.service.CustomerService;
 
 @Controller
 @RequestMapping("/customer")
@@ -27,8 +27,8 @@ public class CustomerController {
 		
 		// get customers from the service
 		List<Customer> theCustomers = customerService.getCustomers();
-				
-		// add the customers to the model
+		System.out.println(theCustomers);
+		
 		theModel.addAttribute("customers", theCustomers);
 		
 		return "list-customers";
