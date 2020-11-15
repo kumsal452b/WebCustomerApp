@@ -70,7 +70,7 @@ public class CustomerController {
 	@GetMapping("/showFormForDelete")
 	public String showFormForDelete(@RequestParam("customerId") int theId) {
 		customerService.deleteCustomer(theId);
-		return "customer-form";
+		return "redirect:/customer/list";
 	}
 }
 
