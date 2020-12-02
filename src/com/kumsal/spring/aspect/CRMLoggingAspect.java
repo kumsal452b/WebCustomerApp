@@ -34,7 +34,7 @@ public class CRMLoggingAspect {
 		
 	}
 	
-	@Before("forAppFlow")
+	@Before("forAppFlow()")
 	public void before(JoinPoint thePoint){
 		String method=thePoint.getSignature().toString();
 		myLogger.info("Before calling Method====>"+method);
