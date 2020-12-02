@@ -14,22 +14,22 @@ public class CRMLoggingAspect {
 	private Logger myLogger=Logger.getLogger(getClass().getName());
 	
 	@Pointcut("execution(* com.kumsal.spring.controller.*.*(..))")
-	private void forControllPackacge(){
+	private void forControllPackage(){
 		
 	}
 	
 		
 	@Pointcut("execution(* com.kumsal.spring.service.*.*(..))")
-	private void forServicePackacge(){
+	private void forServicePackage(){
 		
 	}
 	
 	@Pointcut("execution(* com.kumsal.spring.dao.*.*(..))")
-	private void forDaoPackacge(){
+	private void forDaoPackage(){
 		
 	}
 	
-	@Pointcut("forControllPackacge || forServicePackacge || forDaoPackacge")
+	@Pointcut("forControllPackage() || forServicePackacge() || forDaoPackacge()")
 	private void forAppFlow(){
 		
 	}
